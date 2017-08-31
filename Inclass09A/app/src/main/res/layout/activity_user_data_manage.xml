@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_data_manage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.gandh.inclass09a.user_data_manage">
+    <include android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tool_bar">
+
+        <TextView
+            android:text="Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/gender"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/lname"
+            android:layout_alignStart="@+id/lname" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/fname_view"
+            android:layout_alignBaseline="@+id/fname"
+            android:layout_alignBottom="@+id/fname"
+            android:layout_toRightOf="@+id/fname"
+            android:layout_toEndOf="@+id/fname"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp" />
+
+        <TextView
+            android:text="Last Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lname"
+            android:layout_marginBottom="21dp"
+            android:layout_above="@+id/gender"
+            android:layout_alignLeft="@+id/fname"
+            android:layout_alignStart="@+id/fname" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/profile_pic"
+            android:layout_marginBottom="19dp"
+            android:layout_height="120dp"
+            android:layout_above="@+id/fname_view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/edit"
+            android:id="@+id/floatingActionButton"
+            android:layout_alignBottom="@+id/button_done"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="First Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="78dp"
+            android:layout_marginStart="78dp"
+            android:id="@+id/fname"
+            android:layout_marginBottom="29dp"
+            android:layout_above="@+id/lname"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="Done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_done"
+
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/gender"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lname_view"
+            android:layout_alignBaseline="@+id/lname"
+            android:layout_alignBottom="@+id/lname"
+            android:layout_alignLeft="@+id/fname_view"
+            android:layout_alignStart="@+id/fname_view" />
+
+        <Spinner
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:layout_below="@+id/lname"
+            android:entries="@array/gender"
+            android:layout_toLeftOf="@+id/floatingActionButton"
+            android:layout_toStartOf="@+id/floatingActionButton" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
